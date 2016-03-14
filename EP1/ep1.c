@@ -1,9 +1,9 @@
 /*******************************************************************/
-/**   MAC 438  - Programac~ao Concorrente                         **/
+/**   MAC 438  - Programacao Concorrente                          **/
 /**   IME-USP  - Primeiro Semestre de 2016                        **/
 /**   Prof. Marcel Parolin Jackowski                              **/
 /**                                                               **/
-/**   Primeiro Exerccio-Programa                                  **/
+/**   Primeiro Exercicio-Programa                                  **/
 /**   Arquivo: EP1.c                                              **/
 /**                                                               **/
 /**   <nome do(a) aluno(a)>                <numero USP>           **/
@@ -21,7 +21,7 @@ int main(int argc, char **argv){
 
     printf("Recebidos %d argumentos!\n", argc);
     for(i = 0; i < argc; i++){
-        printf("Argumento %d => %s\n", i, argv[i]);
+        printf("Argumento n.%2.0d => %s\n", i, argv[i]);
     }
 
     return 0;

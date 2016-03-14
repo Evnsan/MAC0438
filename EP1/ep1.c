@@ -16,12 +16,16 @@
 
 #include <stdio.h>
 
+#define DEBUG 0
+
 int main(int argc, char **argv){
     int i;
 
-    printf("Recebidos %d argumentos!\n", argc);
-    for(i = 0; i < argc; i++){
-        printf("Argumento n.%2.0d => %s\n", i, argv[i]);
+    if(DEBUG){
+        printf("Recebidos %d argumentos!\n", argc);
+        for(i = 0; i < argc; i++){
+            printf("Argumento n.%2d => %s\n", i, argv[i]);
+        }
     }
 
     return 0;

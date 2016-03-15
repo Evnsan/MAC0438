@@ -32,6 +32,10 @@
 
 /**process - P1 heapSort**/
 int p1(int m){
+
+	int *v;
+
+	
     printf("   P1 recebeu %d\n", m);
     return 0;
 }

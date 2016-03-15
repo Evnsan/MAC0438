@@ -19,6 +19,10 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include "process1.c"
+#include "process2.c"
+#include "process3.c"
+#include "process4.c"
 
 
 /*Static valors*/
@@ -37,39 +41,6 @@ int limiarize(int arg){
     return -1;
 }
 /*********************/
-
-/**process - P1 heapSort**/
-int p1(char* arg){
-    printf(" P1 recebeu %s\n", arg);
-    return 0;
-}
-/*************************/
-
-/**process - P2 Fibonacci Numbers**/
-int p2(char* arg){
-    printf(" P2 recebeu %s\n", arg);
-    return 0;
-}
-
-/**********************************/
-
-/**process - P3 Buffon's needle**/
-int p3(char* arg){
-    printf(" P3 recebeu %s\n", arg);
-    return 0;
-}
-
-/********************************/
-
-/**process - P4 Integration by simulation**/
-int p4(char* arg){
-    printf(" P4 recebeu %s\n", arg);
-    printf("Vai terminar com ERRO o processo de pid = %d \n", getpid());
-    exit(1);
-    return 1;
-}
-
-/******************************************/
 
 /*****************************************************************************/
 
@@ -97,22 +68,22 @@ int main(int argc, char **argv){
     for(i = 1; i < 5; i++){
         printf("i = %d\n", i);
         if ((child_pid = fork()) == 0){
-            printf("Processo filho (pid = %d) iniciou.\n", getpid());
+            printf("  Processo filho (pid = %d) iniciou.\n", getpid());
             switch(i){
                 case 1:
-                    p1("arg1");
+                    p1(atoi(argv[1]));
                 break;
                 case 2:
-                    p2("arg2");
+                    p2(atoi(argv[2]));
                 break;
                 case 3:
-                    p3("arg3");
+                    p3(atoi(argv[3]));
                 break;
                 case 4:
-                    p4("arg4");
+                    p4(atoi(argv[4]));
                 break;
             }
-            printf("Vai terminar processo de pid = %d \n", getpid());
+            printf("  Vai terminar processo de pid = %d \n", getpid());
             exit(0);
         }
     }

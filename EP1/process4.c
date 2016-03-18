@@ -22,7 +22,10 @@
 #include "process3.h"
 
 /*Static valors*/
-#define DEBUG 0
+#ifndef DEBUG
+    #define DEBUG 0
+#endif
+
 #define SEC1 1.85081571768 
 
 
@@ -97,11 +100,12 @@ double p4(int s){
 
 
 /*para testar*/
+/*
 int main(int argc, char** argv){
     if(argc > 1){
         p4(atoi(argv[1]));
     }
     return 0;
 }
-
+*/
 /*******************************/

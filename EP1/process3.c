@@ -22,7 +22,11 @@
 #include "process3.h"
 
 /*Static valors*/
-#define DEBUG 0
+
+#ifndef DEBUG
+    #define DEBUG 0
+#endif
+
 #define PIX2 6.28318530718  /*Aproximadamente 2 * PI*/
 
 
@@ -96,6 +100,7 @@ int p3(int r){
 
 
 /*para testar*/
+/*
 int main(int argc, char** argv){
     printf("The maximum value of INT = %d\n", INT_MAX);
     if(argc > 1){
@@ -103,5 +108,5 @@ int main(int argc, char** argv){
     }
     return 0;
 }
-
+*/
 /*******************************/

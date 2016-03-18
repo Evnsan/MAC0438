@@ -72,15 +72,19 @@ int main(int argc, char **argv){
             switch(i){
                 case 1:
                     p1(atoi(argv[1]));
+                    exit(0);
                 break;
                 case 2:
                     p2(atoi(argv[2]));
+                    exit(0);
                 break;
                 case 3:
                     p3(atoi(argv[3]));
+                    exit(0);
                 break;
                 case 4:
                     p4(atoi(argv[4]));
+                    exit(0);
                 break;
             }
             printf("  Vai terminar processo de pid = %d \n", getpid());

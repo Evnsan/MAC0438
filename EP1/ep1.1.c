@@ -19,14 +19,13 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <sys/types.h>
-#include "process1.c"
-#include "process2.c"
 #include "process3.c"
 #include "process4.c"
 #include "debug.h"
 
 
 /*Static valors*/
+
 #define MAXVALUES 25000
 #define MINVALUES 1
 
@@ -71,11 +70,15 @@ int main(int argc, char **argv){
             printf("  Processo filho (pid = %d) iniciou.\n", getpid());
             switch(i){
                 case 1:
+                    /*
                     p1(atoi(argv[1]));
+                    */
                     exit(0);
                 break;
                 case 2:
+                    /*
                     p2(atoi(argv[2]));
+                    */
                     exit(0);
                 break;
                 case 3:

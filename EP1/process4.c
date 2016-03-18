@@ -19,13 +19,10 @@
 #include <math.h>
 #include <time.h>
 #include <limits.h>
+#include "debug.h"
 #include "process3.h"
 
 /*Static valors*/
-#ifndef DEBUG
-    #define DEBUG 0
-#endif
-
 #define SEC1 1.85081571768 
 
 
